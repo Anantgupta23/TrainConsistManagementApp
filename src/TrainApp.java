@@ -1,29 +1,27 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedHashSet;
 
 public class TrainApp {
     public static void main(String[] args) {
 
         System.out.println("==================================");
-        System.out.println("UC3 - Track Unique Bogie IDs ");
+        System.out.println("UC5 - Preserve Insertion Order of Bogies");
         System.out.println("==================================\n");
 
-        Set<String> bogies = new HashSet<>();
+        LinkedHashSet<String> train = new LinkedHashSet<>();
 
-        bogies.add("BG101");
-        bogies.add("BG102");
-        bogies.add("BG103");
-        bogies.add("BG104");
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("Cargo");
+        train.add("Guard");
 
-        bogies.add("BG101");
-        bogies.add("BG102");
+        train.add("Sleeper");
 
-        System.out.println("Bogie IDs After Insertion:");
-        System.out.println(bogies);
+        System.out.println("Final Train Formation:");
+        System.out.println(train);
 
         System.out.println("\nNote:");
-        System.out.println("Duplicates are automatically ignored by HashSet.");
+        System.out.println("Duplicates are not allowed and insertion order is preserved.");
 
-        System.out.println("\nUC3 uniqueness validation completed...");
+        System.out.println("\nUC5 insertion order validation completed...");
     }
 }
